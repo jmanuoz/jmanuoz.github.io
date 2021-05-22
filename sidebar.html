@@ -23,20 +23,20 @@
             </div><!--//profile-section-->
             
             <ul class="navbar-nav flex-column text-left">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fas fa-user fa-fw mr-2"></i>ABOUT <span class="sr-only">(current)</span></a>
+                <li class="nav-item " id="item_about">
+                    <a class="nav-link" href="index.html"><i class="fas fa-user fa-fw mr-2"></i>ABOUT </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="item_publications">
                     <a class="nav-link" href="publications.html"><i class="fas fa-book fa-fw mr-2"></i>PUBLICATIONS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="item_research">
                     <a class="nav-link" href="research.html"><i class="ai ai-springer	ai-lg fa-fw "></i>RESEARCH</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="item_teaching">
                     <a class="nav-link" href="teaching.html"><i class="fas fa-chalkboard-teacher fa-fw mr-2"></i>TEACHING</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cv.html"><i class="fas fa-file fa-fw mr-2"></i>VITA</a>
+                <li class="nav-item" id="item_vita">
+                    <a class="nav-link" href="vita.html"><i class="fas fa-file fa-fw mr-2"></i>VITA</a>
                 </li>
             </ul>
             
@@ -45,3 +45,17 @@
             </div>
         </div>
     </nav>
+<script>
+    if($('#section').val()=="publications"){
+        $( "#item_publications" ).addClass( "active" );
+    }else if($('#section').val()=="research"){
+        $( "#item_research" ).addClass( "active" );
+    }else if($('#section').val()=="about"){
+        $( "#item_about" ).addClass( "active" );
+    }else if($('#section').val()=="teaching"){
+        $( "#item_teaching" ).addClass( "active" );
+    }else if($('#section').val()=="vita"){
+        $( "#item_vita" ).addClass( "active" );
+    }
+    
+</script>
